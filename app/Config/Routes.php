@@ -34,7 +34,9 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 $routes->add('alunos', 'AlunoController::index');
+$routes->add('novo-aluno','AlunoController::insert');
 $routes->add('alunos/(:num)', 'AlunoController::detalheAluno/$1');
+
 
 /*
  * --------------------------------------------------------------------
