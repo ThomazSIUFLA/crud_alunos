@@ -35,6 +35,7 @@ $routes->setAutoRoute(true);
 $routes->get('/', 'Home::index');
 $routes->add('alunos', 'AlunoController::index');
 $routes->add('novo-aluno','AlunoController::insert');
+$routes->add('editar-aluno/(:num)','AlunoController::editar/$1');
 $routes->add('alunos/(:num)', 'AlunoController::detalheAluno/$1');
 
 
