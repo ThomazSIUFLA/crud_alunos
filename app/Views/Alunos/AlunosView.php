@@ -1,30 +1,29 @@
-<?= $this->include('Header', array('titulo')) ?>
-<h2 class="title"><?=$titulo?></h2>
-<a class="badge bg-primary text-wrap" style="width: 10rem;" href="<?= base_url('/novo-aluno') ?>">+ Inserir novo aluno</a>
+<table >
 
-<table class="table table-dark table-hover">
-<thead>
-<th>Id</th>
-<th>Nome</th>
-<th>Matrícula</th>
-<th>Telefone</th>
-<th>Turma</th>
-<th>Data Nascimento</th>
-<th>Data Cadastro</th>
-<th>Última atualização</th>
-</thead>
-<?php foreach ($alunos as $aluno) :?>
-<tr tabindex="0" style="cursor: Pointer;" onclick="location.href = '<?= base_url('/alunos/'.$aluno->idaluno) ?>';">
-<td><?= $aluno->idaluno ?></td>
-<td> <?= $aluno->nome ?></td>
-<td> <?= $aluno->matricula ?></td>
-<td> <?= $aluno->telefone ?></td>
-<td> <?= $aluno->turma ?></td>
-<td> <?= $aluno->nascimento ?></td>
-<td> <?= $aluno->created_at ?></td>
-<td> <?= $aluno->updated_at ?></td>
-</tr>
-</a>
-<?php endforeach?>
 </table>
-<?= $this->include('Footer') ?>
+<div class="table-responsive" style="max-height:400px; overflow-x:auto;">
+    <table class="table table-dark table-hover">
+        <!-- se estiver usando bootstrap coloque a classe table -->
+        <thead class="header" style="overflow-y: auto; height: 100px; ">
+            <th>Foto</th>
+            <th>Id</th>
+            <th>Nome</th>
+            <th>Matrícula</th>
+            <th>Telefone</th>
+            <th>Turma</th>
+            <th>Data Nascimento</th>
+        </thead>
+        <?php foreach ($alunos as $aluno) : ?>
+            <tr tabindex="0" style="cursor: Pointer;" onclick="location.href = '<?= base_url('/alunos/' . $aluno->idaluno) ?>';">
+                <td><img src="<?= base_url('assets/images/'.$aluno->img)?>" alt="foto" width="80"></td>
+                <td><?= $aluno->idaluno ?></td>
+                <td> <?= $aluno->nome ?></td>
+                <td> <?= $aluno->matricula ?></td>
+                <td> <?= $aluno->telefone ?></td>
+                <td> <?= $aluno->turma ?></td>
+                <td> <?= date('d-m-Y',strtotime($aluno->nascimento))?></td>
+            </tr>
+            </a>
+        <?php endforeach ?>
+    </table>
+</div>

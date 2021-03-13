@@ -6,13 +6,25 @@ use App\Models\AlunoModel;
 
 class AlunoController extends BaseController
 {
-    protected $helpers = ['url'];
+    protected $helpers = ['url','form'];
 	public function index()
 	{
         $alunoModel = new AlunoModel();
         $data['titulo'] = "Lista de alunos";
         $data['alunos'] = $alunoModel->find();
-        return view('Alunos\AlunosView', $data);
+        echo view('Header',$data);
+        echo view('Alunos\AlunosHome');
+        echo view ('Footer');
+	}
+
+    public function list()
+	{
+        $alunoModel = new AlunoModel();
+        $data['titulo'] = "Lista de alunos";
+        $data['alunos'] = $alunoModel->find();
+        echo view('Header',$data);
+        echo view('Alunos\AlunosView');
+        echo view ('Footer');
 	}
 
     public function detalheAluno($idAluno)
@@ -22,10 +34,12 @@ class AlunoController extends BaseController
         $alunoModel = new AlunoModel();
         $aluno = $alunoModel->find($idAluno);
         $data['aluno']=$aluno;
-		return view('Alunos\DetalheAlunoView',$data);
+		echo view('Header',$data);
+        echo view('Alunos\DetalheAlunoView');
+        echo view ('Footer');
 	}
 
-    public function insert()
+    public function inserir()
     {
 
         $data['titulo'] = "Inserir aluno";
@@ -48,7 +62,9 @@ class AlunoController extends BaseController
             }
         }
 
-        return view('Alunos\FormAlunoView',$data);
+        echo view('Header',$data);
+        echo view('Alunos\FormAlunoView');
+        echo view ('Footer');
         
     }
 }
