@@ -18,7 +18,7 @@
     <a class="navbar-brand" href="<?= base_url('public/') ?>"><img src="<?= base_url('public/assets/images/logo.png') ?>" alt="logo" width="100"></a>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <a class="nav-item nav-link active" href="<?= base_url('/') ?>">Home </a>
+        <a class="nav-item nav-link active" href="<?= base_url('/public') ?>">Home </a>
         <a class="nav-item nav-link" href="<?= base_url('public/alunos') ?>">Lista de alunos</a>
         <a class="nav-item nav-link" href="<?= base_url('public/novo-aluno') ?>">Inserir aluno</a>
       </div>

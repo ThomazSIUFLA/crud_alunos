@@ -36,6 +36,7 @@ $routes->add('/', 'AlunoController::index');
 $routes->add('alunos', 'AlunoController::list');
 $routes->add('novo-aluno','AlunoController::inserir');
 $routes->add('editar-aluno/(:num)','AlunoController::editar/$1');
+$routes->add('excluir-aluno/(:num)','AlunoController::excluir/$1');
 $routes->add('alunos/(:num)', 'AlunoController::detalheAluno/$1');
 
 
