@@ -1,19 +1,19 @@
 <h2><?= $msg ?></h2>
-<link href="<?= base_url('assets/css/floating-labels.css') ?>" rel="stylesheet">
+<link href="<?= base_url('public/assets/css/floating-labels.css') ?>" rel="stylesheet">
 <div class="container col-12">
     <div class="text-center mb-4">
         <h1 class="h3 mb-3 font-weight-normal">Cadastrar Novo aluno</h1>
     </div>
     <div class="justify-content-start col-md-3 mt-4">
         <div>
-            <img src="<?= base_url('assets/images/usuarioPadrao.png') ?>" id="imgUp" class="img-thumbnail img-responsive" width="400" height="600" alt="foto aluno">
+            <img src="<?= base_url('public/assets/images/usuarioPadrao.png') ?>" id="imgUp" class="img-thumbnail img-responsive" width="400" height="600" alt="foto aluno">
         </div>
     </div>
     <?php
     $atributos = array(
         "class" => "formform-signin"
     );
-    echo form_open_multipart('novo-aluno', $atributos); ?>
+    echo form_open_multipart('public/novo-aluno', $atributos); ?>
     <div class="formform-label-group">
         <input type="text" id="nome" name="nome" class="form-control" placeholder="Nome" required autofocus>
         <label for="nome">Nome</label>

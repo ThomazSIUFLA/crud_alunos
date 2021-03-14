@@ -62,16 +62,27 @@ class AlunoController extends BaseController
                 $ext = pathinfo($_FILES['img']['name'])['extension'];
                 if($ext === 'jpg' || $ext === 'jpeg' || $ext === 'png' || $ext === 'gif'){
                     $newName = $img->getRandomName();
-                    $pasta = WRITEPATH.'/images';
-                    $img->move(WRITEPATH.'\images', $newName);   
+                    $pasta = ROOTPATH.'public\assets\images\users';
+
+                    if (file_exists($pasta)) {
+                        echo '';
+                    } else {
+                        $old_umask = umask(0);
+                        mkdir($pasta, 0777, true); 
+                        umask($old_umask);
+                    }
+
+                    $img->move($pasta, $newName); 
+                    
                     $image = \Config\Services::image()
-                    ->withFile(WRITEPATH.'images\\'.$newName)
-                    ->resize(60, 80, true, 'auto')
-                    ->save(WRITEPATH.'images\\'.$newName);                 
+                    ->withFile($pasta.'\\'.$newName)
+                    ->resize(90, 120, true, 'auto')
+                    ->save($pasta.'\\'.$newName);
+                 
                 } else {
                     $data['msg'] = '<h1 color="red">ERRO ao salvar imagem, ALUNO NÃO FOI SALVO</h1>';
                     echo view('Header',$data);
-                    echo view('Alunos\FormAlunoView');
+                    echo view('Alunos/FormAlunoView');
                     echo view ('Footer'); 
                 }
                 
@@ -96,7 +107,7 @@ class AlunoController extends BaseController
         }
 
         echo view('Header',$data);
-        echo view('Alunos\FormAlunoView');
+        echo view('Alunos/FormAlunoView');
         echo view ('Footer');
         
     }

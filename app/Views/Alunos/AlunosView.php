@@ -14,8 +14,8 @@
             <th>Data Nascimento</th>
         </thead>
         <?php foreach ($alunos as $aluno) : ?>
-            <tr tabindex="0" style="cursor: Pointer;" onclick="location.href = '<?= base_url('/alunos/' . $aluno->idaluno) ?>';">
-                <td><img src="<?= WRITEPATH.'images\\'.$aluno->img?>" alt="foto" width="60" height="80"></td>
+            <tr tabindex="0" style="cursor: Pointer;" onclick="location.href = '<?= base_url('public/alunos/' . $aluno->idaluno) ?>';">
+                <td><img src="<?= base_url('public/assets/images/users').'/'.$aluno->img?>" alt="foto" width="60" height="80"></td>
                 <td><?= $aluno->idaluno ?></td>
                 <td> <?= $aluno->nome ?></td>
                 <td> <?= $aluno->matricula ?></td>

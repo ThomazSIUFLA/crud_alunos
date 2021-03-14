@@ -2,7 +2,7 @@
 <div class="card text-white bg-info mb-3 mx-auto" style="max-width: 900px;">
   <div class="row no-gutters">
     <div class="col-md-4">
-    <img src="<?= str_replace('\\','/',WRITEPATH.'images\\'.$aluno->img)?>" alt="foto Aluno">
+    <img src="<?= base_url('public/assets/images/users').'/'.$aluno->img?>" alt="foto Aluno" width="240">
     </div>
     <div class="col-md-8">
       <div class="card-body">
@@ -18,7 +18,7 @@
   </div>
 </div>
 <div class="d-flex justify-content-end">
-<a href="<?=base_url('/editar-aluno/'.$aluno->idaluno)?>" class="btn btn-outline-warning ml-2">Editar</a>
+<a href="<?=base_url('public//editar-aluno/'.$aluno->idaluno)?>" class="btn btn-outline-warning ml-2">Editar</a>
 <a href="#" class="btn btn-outline-danger ml-2">Excluir</a>
 <a href="JavaScript: window.history.back();" class="btn btn-primary" style="width: 10rem;">Voltar</a>
 </div>
