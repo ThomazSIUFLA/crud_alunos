@@ -2,7 +2,7 @@
 <div class="card text-white bg-info mb-3 mx-auto" style="max-width: 900px;">
   <div class="row no-gutters">
     <div class="col-md-4">
-    <img src="<?= ROOTPATH.'uploads\\image\\'.$aluno->img?>" alt="foto Aluno">
+    <img src="<?= str_replace('\\','/',WRITEPATH.'images\\'.$aluno->img)?>" alt="foto Aluno">
     </div>
     <div class="col-md-8">
       <div class="card-body">
