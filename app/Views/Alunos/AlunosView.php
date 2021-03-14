@@ -15,7 +15,7 @@
         </thead>
         <?php foreach ($alunos as $aluno) : ?>
             <tr tabindex="0" style="cursor: Pointer;" onclick="location.href = '<?= base_url('/alunos/' . $aluno->idaluno) ?>';">
-                <td><img src="<?= base_url('assets/images/'.$aluno->img)?>" alt="foto" width="80"></td>
+                <td><img src="<?= WRITEPATH."uploads\\".$aluno->img?>" alt="foto" width="60" height="80"></td>
                 <td><?= $aluno->idaluno ?></td>
                 <td> <?= $aluno->nome ?></td>
                 <td> <?= $aluno->matricula ?></td>

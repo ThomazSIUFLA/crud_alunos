@@ -15,11 +15,11 @@
     );
     echo form_open_multipart('novo-aluno', $atributos); ?>
     <div class="formform-label-group">
-        <input type="text" id="nome" class="form-control" placeholder="Nome" required autofocus>
+        <input type="text" id="nome" name="nome" class="form-control" placeholder="Nome" required autofocus>
         <label for="nome">Nome</label>
     </div>
     <div class="formform-label-group">
-        <input type="number" id="matricula" class="form-control" placeholder="Matricula" required>
+        <input type="number" id="matricula" name="matricula" class="form-control" placeholder="Matricula" required>
         <label for="matricula">Matricula</label>
     </div>
     <div class="formform-label-group">
@@ -27,7 +27,7 @@
         <input class="form-control" type="tel" name="telefone" id="telefone" pattern="\([0-9]{2}\)[\s][0-9]{4,5}-[0-9]{4}" placeholder="Telefone" />
         <label for="telefone">Telefone</label>
         <script type="text/javascript">
-            $("#telefone").mask("(00) 0000-00009");
+            $("#telefone").mask("(##) 90000-0000");
         </script>
     </div>
     <div>
@@ -40,6 +40,9 @@
             <option value="2-a">2º A</option>
             <option value="2-a">2º B</option>
             <option value="2-a">2º C</option>
+            <option value="2-a">3º A</option>
+            <option value="2-a">3º B</option>
+            <option value="2-a">3º C</option>
         </select>
     </div>
     <div>
@@ -53,7 +56,7 @@
     <div class="btn-group btn-goup-lg mr-2 justify-content-end">
         <a class="btn btn-success btn-lg mt-4" type="reset">Cancelar</a>
         <a class="btn btn-success btn-lg mt-4" type="reset">Limpar</a>
-        <button class="btn btn-primary btn-lg mt-4 col-md-6" type="submit"><?= $acao ?></button>
+        <button class="btn btn-primary btn-lg mt-4 col-md-6" value="cadastrar" type="submit"><?= $acao ?></button>
     </div>
     </form>
 </div>
