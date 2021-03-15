@@ -27,9 +27,7 @@ Thomaz Flanklin :smile:
 ## Requisitos
 
 * Git
-* Node.js
-* PHP 5.5 ou superior
-* Servidor Apache
+* PHP 7,0 ou superior
 * MySQL
 * Composer
 
