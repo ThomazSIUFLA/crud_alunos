@@ -1,63 +1,42 @@
-# CodeIgniter 4 Application Starter
+# CRUD simples de aluno 
+### Desenvolvido para PS_Grupo_Delta
 
-## What is CodeIgniter?
 
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](http://codeigniter.com).
+## Sobre o Sistema
 
-This repository holds a composer-installable app starter.
-It has been built from the
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
+* Feito em PHP 7
+* Banco de Dados MySQL
+* Framework Codeigniter 4
 
-More information about the plans for version 4 can be found in [the announcement](http://forum.codeigniter.com/thread-62615.html) on the forums.
+* Bootstrap 5.0 (CDN)
 
-The user guide corresponding to this version of the framework can be found
-[here](https://codeigniter4.github.io/userguide/).
 
-## Installation & updates
+## Sobre o Desenvolvimento
 
-`composer create-project codeigniter4/appstarter` then `composer update` whenever
-there is a new release of the framework.
+* Apache 2.4.41
+* MariaDB 10.4.11
+* PHP 7.4.3 (VC15 X86 64bit thread safe) * PEAR
+* phpMyAdmin 5.0.1
+* XAMPP Control Panel Version 3.2.4.
 
-When updating, check the release notes to see if there are any changes you might need to apply
-to your `app` folder. The affected files can be copied or merged from
-`vendor/codeigniter4/framework/app`.
 
-## Setup
+## Autor
 
-Copy `env` to `.env` and tailor for your app, specifically the baseURL
-and any database settings.
+Thomaz Flanklin :smile:
 
-## Important Change with index.php
+## Requisitos
 
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
+* Git
+* Node.js
+* PHP 5.5 ou superior
+* Servidor Apache
+* MySQL
 
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
+## Guia de configuração
 
-**Please** read the user guide for a better explanation of how CI4 works!
+1. Clone o repositório dentro da pasta htdocs (no caso do XAMPP)
+ `git clone https://github.com/ThomazSIUFLA/crud_alunos.git`
 
-## Repository Management
+2. Execute o script delta_DB.sql
 
-We use Github issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
-
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
-
-## Server Requirements
-
-PHP version 7.3 or higher is required, with the following extensions installed:
-
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
-
-Additionally, make sure that the following extensions are enabled in your PHP:
-
-- json (enabled by default - don't turn it off)
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php)
-- xml (enabled by default - don't turn it off)
+3. Abra no navegador `http://localhost:8080/delta/`
