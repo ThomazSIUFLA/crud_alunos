@@ -43,9 +43,8 @@ Thomaz Flanklin :smile:
 3. Execute o script delta_DB.sql no seu banco de dados
 
 4. Caso não clone o repositório dentro da pasta htdocs direto, altere o arquivo App.php (`app\Config\App.php`) alterando a linha 26 indicando o caminho:
-`public $baseURL = 'http://localhost:8080/crud_alunos/';`
-Abra no navegador `http://localhost:8080/< caminho do projeto dentro de htdocs >/public`
-exemplo:  `http://localhost:8080/crud_alunos/public`
+`public $baseURL = 'http://localhost:8080/<caminho dentro de htdocs>/';`
+
 
 5. Abra no navegador `http://localhost:8080/< caminho do projeto dentro de htdocs >/public`
 exemplo:  `http://localhost:8080/crud_alunos/public`
