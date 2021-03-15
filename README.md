@@ -38,9 +38,14 @@ Thomaz Flanklin :smile:
 1. Clone o repositório dentro da pasta htdocs (no caso do XAMPP)
  `git clone https://github.com/ThomazSIUFLA/crud_alunos.git`
 
-1.2 Execute `composer install`
+2. Execute `composer install`
 
-2. Execute o script delta_DB.sql no seu banco de dados
+3. Execute o script delta_DB.sql no seu banco de dados
 
-3. Abra no navegador `http://localhost:8080/< caminho do projeto dentro de htdocs >/public`
+4. Caso não clone o repositório dentro da pasta htdocs direto, altere o arquivo App.php (`app\Config\App.php`) alterando a linha 26 indicando o caminho:
+`public $baseURL = 'http://localhost:8080/crud_alunos/';`
+Abra no navegador `http://localhost:8080/< caminho do projeto dentro de htdocs >/public`
+exemplo:  `http://localhost:8080/crud_alunos/public`
+
+5. Abra no navegador `http://localhost:8080/< caminho do projeto dentro de htdocs >/public`
 exemplo:  `http://localhost:8080/crud_alunos/public`
